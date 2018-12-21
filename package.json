@@ -62,6 +62,7 @@
     "@osjs/server": "^3.0.12",
     "@osjs/standard-theme": "^4.0.2",
     "@osjs/textpad-application": "^1.2.2",
+    "hyperapp": "^1.2.9",
     "userid": "^0.3.1"
   },
   "repository": {
