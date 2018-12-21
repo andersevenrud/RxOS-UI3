@@ -1,0 +1,80 @@
+{
+  "name": "@osjs/osjs",
+  "version": "3.0.0-alpha.29",
+  "description": "OS.js v3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src/client/**/*.js src/server/**/*.js",
+    "stylelint": "stylelint src/client/*.scss",
+    "serve": "node src/server/index.js",
+    "build:manifest": "osjs-cli package:discover",
+    "package:discover": "osjs-cli package:discover",
+    "package:create": "osjs-cli package:create",
+    "make:auth": "osjs-cli make:auth",
+    "make:settings": "osjs-cli make:settings",
+    "make:vfs": "osjs-cli make:vfs",
+    "make:application": "osjs-cli make:application",
+    "make:provider": "osjs-cli make:provider",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "osjs"
+  ],
+  "author": "Anders Evenrud <andersevenrud@gmail.com>",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.10.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.4.1",
+    "typeface-roboto": "0.0.54",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@osjs/calculator-application": "^1.2.2",
+    "@osjs/cli": "^3.0.5",
+    "@osjs/client": "^3.0.27",
+    "@osjs/dialogs": "^3.0.5",
+    "@osjs/draw-application": "^1.2.1",
+    "@osjs/filemanager-application": "^1.2.5",
+    "@osjs/freedesktop-sounds": "^3.0.0",
+    "@osjs/gnome-icons": "^4.0.1",
+    "@osjs/gui": "^4.0.12",
+    "@osjs/htmlviewer-application": "^1.2.2",
+    "@osjs/musicplayer-application": "^1.2.3",
+    "@osjs/panels": "^3.0.6",
+    "@osjs/preview-application": "^1.1.10",
+    "@osjs/server": "^3.0.12",
+    "@osjs/settings-application": "^1.0.8",
+    "@osjs/standard-theme": "^4.0.2",
+    "@osjs/textpad-application": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osjs/OS.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osjs/OS.js/issues"
+  },
+  "homepage": "https://www.os-js.org",
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
