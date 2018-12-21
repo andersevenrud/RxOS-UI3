@@ -18,7 +18,7 @@ class SkylarkConfiguration {
   }
 
   get() {
-    return Object.assign({}, this.config);
+    return Promise.resolve(Object.assign({}, this.config));
   }
 }
 

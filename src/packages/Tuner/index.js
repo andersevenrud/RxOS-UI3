@@ -13,6 +13,13 @@ import {
   listView
 } from '@osjs/gui';
 
+const reduceObject = obj => Object.keys(obj)
+  .reduce((carry, name) => {
+    return Object.assign({
+      [name]: name
+    }, carry)
+  }, {});
+
 const createRows = values => ([{
   columns: ['Stream', values.stream],
 }, {
@@ -62,30 +69,52 @@ const createRows = values => ([{
 
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
+  const skylarkConfig = core.make('skylark/config');
 
   const render = $content => {
     const hyperapp = app({
+      beamNames: {},
+      beamName: '',
+
+      antennaTypes: {},
+      antennaType: '',
+
       beam: listView.state({
         columns: ['Region', 'Frequenzy', 'Beam Type']
       }),
+
       status: listView.state({
         columns: ['Name', 'Value'],
         rows: createRows({})
       }),
     }, {
       beam: listView.actions({}),
-      status: listView.actions({})
+      status: listView.actions({}),
+      setConfig:  config => (state, actions) => {
+        return {
+          antennaName: config.tunerConf.selectedAntenna,
+          antennaTypes: reduceObject(config.tunerConf.antennaTypes),
+          beamName: config.tunerConf.selectedBeam,
+          beamNames: reduceObject(config.tunerConf.beams)
+        }
+      }
     }, (state, actions) => {
       const BeamParameters = listView.component(state.beam, actions.beam);
       const Status = listView.component(state.status, actions.status);
 
       const tabs = [
         h(Box, {grow: 1, shrink: 1}, [
-          h(SelectField),
+          h(SelectField, {
+            choices: state.beamNames,
+            value: state.beamName
+          }),
 
           h(BeamParameters, {box: {grow: 1, shrink: 1}}),
 
-          h(SelectField),
+          h(SelectField, {
+            choices: state.antennaTypes,
+            value: state.antennaType,
+          }),
 
           h(Toolbar, {justify: 'flex-end'}, [
             h(Button, {}, 'Apply')
@@ -118,6 +147,8 @@ const register = (core, args, options, metadata) => {
         }, tabs)
       ]);
     }, $content);
+
+    proc.on('config-loaded', config => hyperapp.setConfig(config));
   };
 
   proc.createWindow({
@@ -127,6 +158,11 @@ const register = (core, args, options, metadata) => {
     dimension: {width: 400, height: 300}
   })
     .on('destroy', () => proc.destroy())
+    .on('render', () => {
+      skylarkConfig.get()
+        .then(config => proc.emit('config-loaded', config))
+        .catch(err => console.warn(err));
+    })
     .render(render);
 
   return proc;

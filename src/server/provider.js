@@ -18,7 +18,7 @@ class SkylarkServiceProvider {
   }
 
   init() {
-    this.core.on('init', () => this.registerRoutes());
+    this.registerRoutes();
 
     return Promise.all([
       this.telemetry.init(),
@@ -30,19 +30,19 @@ class SkylarkServiceProvider {
   registerRoutes() {
     const {routeAuthenticated} = this.core.make('osjs/express');
 
-    routeAuthenticated('GET', '/skylark/tuner/config', (req, res) => {
+    routeAuthenticated('get', '/skylark/config', (req, res) => {
       return this.config.get()
         .then(json => res.json(json))
         .catch(error => res.status(500).json({error}));
     }, ['admin']);
 
-    routeAuthenticated('POST', '/skylark/tuner/config', (req, res) => {
+    routeAuthenticated('post', '/skylark/config', (req, res) => {
       return this.config.set(req.body)
         .then(json => res.json(json))
         .catch(error => res.status(500).json({error}));
     }, ['admin']);
 
-    routeAuthenticated('GET', '/skylark/tuner/ondd', (req, res) => {
+    routeAuthenticated('get', '/skylark/ondd', (req, res) => {
       return this.odnn.status()
         .then(json => res.json(json))
         .catch(error => res.status(500).json({error}));

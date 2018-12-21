@@ -17,16 +17,17 @@ export class SkylarkServiceProvider {
   init() {
     const request = (method, endpoint, body = {}) => this.core.request(
       this.core.url(endpoint),
-      {method, body}
+      {method, body},
+      'json'
     );
 
     this.core.singleton('skylark/config', () => ({
-      set: config => request('POST', '/skylark/tuner/config', conig),
-      get: () => request('GET', '/skylark/tuner/config')
+      set: config => request('POST', '/skylark/config', conig),
+      get: () => request('GET', '/skylark/config')
     }));
 
     this.core.singleton('skylark/odnn', () => ({
-      status: () => request('GET', '/skylark/tuner/ondd')
+      status: () => request('GET', '/skylark/ondd')
     }));
 
     return Promise.resolve();

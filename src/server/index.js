@@ -62,7 +62,9 @@ osjs.register(AuthServiceProvider, {
   }
 });
 osjs.register(SettingsServiceProvider);
-osjs.register(SkylarkServiceProvider);
+osjs.register(SkylarkServiceProvider, {
+  depends: ['osjs/express']
+});
 
 process.on('SIGTERM', () => osjs.destroy());
 process.on('SIGINT', () => osjs.destroy());
