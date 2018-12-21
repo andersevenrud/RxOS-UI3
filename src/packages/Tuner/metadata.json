@@ -1,0 +1,15 @@
+{
+  "type": "application",
+  "name": "Tuner",
+  "category": "utilities",
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Tuner"
+  },
+  "description": {
+    "en_EN": "Tuner"
+  },
+  "files": [
+    "main.js"
+  ]
+}

@@ -12,9 +12,6 @@ Node 8 or above
 # Install dependencies
 npm install
 
-# Discover packages
-npm run package:discover
-
 # Build client
 npm run build
 
@@ -50,7 +47,7 @@ To create a packaged distribution, run: `./pack.sh`
 * [ ] App: News
 * [ ] App: Radio
 * [ ] App: Reader
-* [ ] App: Tuner
+* [ ] App: Tuner (**in progress**)
 * [ ] App: Weather
 * [ ] App: WhatsNew
 * [x] App: Wikipedia
