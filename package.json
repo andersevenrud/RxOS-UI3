@@ -63,7 +63,10 @@
     "@osjs/standard-theme": "^4.0.2",
     "@osjs/textpad-application": "^1.2.2",
     "hyperapp": "^1.2.9",
-    "userid": "^0.3.1"
+    "network": "^0.4.1",
+    "unix-dgram": "^2.0.2",
+    "userid": "^0.3.1",
+    "x2js": "^3.2.3"
   },
   "repository": {
     "type": "git",

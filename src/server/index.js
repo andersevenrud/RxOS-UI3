@@ -49,6 +49,7 @@ const {
 
 const config = require('./config.js');
 const auth = require('./auth.js');
+const {SkylarkServiceProvider} = require('./provider.js');
 
 const osjs = new Core(config, {});
 
@@ -61,6 +62,7 @@ osjs.register(AuthServiceProvider, {
   }
 });
 osjs.register(SettingsServiceProvider);
+osjs.register(SkylarkServiceProvider);
 
 process.on('SIGTERM', () => osjs.destroy());
 process.on('SIGINT', () => osjs.destroy());

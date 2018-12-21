@@ -53,6 +53,12 @@ module.exports = {
     auth: {
       test: true,
       binary: '/usr/bin/checkpass.sh'
+    },
+    config: {
+      file: '/etc/skylark_config.json',
+      confd: '/etc/skylark/conf.d/',
+      write_path: '/mnt/conf/etc/',
+      write_config: '/mnt/conf/etc/skylark_config.json'
     }
   }
 }

@@ -42,6 +42,8 @@ To create a packaged distribution, run: `./pack.sh`
 * [x] Client style configs
 * [ ] Distro: Target files
 * [ ] Distro: Packaging script (**in progress**)
+* [ ] Service: Config (**in progress**)
+* [ ] Service: Telemetry (**in progress**)
 * [ ] App: LogViewer
 * [ ] App: Messaging
 * [ ] App: Network
