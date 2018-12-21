@@ -28,21 +28,33 @@ npm run build
 
 Launches at http://localhost:8080 by default
 
-## TODO
+## Packaging
 
-This list will be updated as I find things...
+To create a packaged distribution, run: `./pack.sh`
+
+**Work in progress**
+
+## TODO
 
 * [x] Authentication Adapter
 * [x] VFS Mountpoints
 * [x] Distro layout
 * [x] Client style configs
-* [ ] LogViewer
-* [ ] Messaging
-* [ ] Network
-* [ ] News
-* [ ] Radio
-* [ ] Reader
-* [ ] Tuner
-* [ ] Weather
-* [ ] WhatsNew
-* [ ] Wikipedia **in progress**
+* [ ] Distro: Target files
+* [ ] Distro: Packaging script (**in progress**)
+* [ ] App: LogViewer
+* [ ] App: Messaging
+* [ ] App: Network
+* [ ] App: News
+* [ ] App: Radio
+* [ ] App: Reader
+* [ ] App: Tuner
+* [ ] App: Weather
+* [ ] App: WhatsNew
+* [x] App: Wikipedia
+
+## Notes
+
+* All packages share the bottom `node_modules/`
+* I discovered that some v2 GUI features has not made it into v3
+* At the moment the server uses dummy (testing) authentication. See `src/server/config.js`
