@@ -35,30 +35,35 @@
 
 const path = require('path');
 const root = path.resolve(__dirname, '../../');
+const development = process.env.SKYLARK_DEVELOPMENT === 'true';
+const imageRoot = development ? path.resolve(root, 'target') : path.resolve('/');
+const vfsRoot = development ? path.resolve(root, 'vfs') : path.resolve('/home');
 
 module.exports = {
   root,
   port: 8080,
   public: path.resolve(root, 'dist'),
   vfs: {
-    root: '/home',
+    root: vfsRoot,
     mountpoints: [{
       name: 'downloads',
       attributes: {
-        root: '/mnt/downloads'
+        root: path.resolve(imageRoot, 'mnt/downloads')
       }
     }]
   },
   skylark: {
+    development,
+
     auth: {
-      test: true,
-      binary: '/usr/bin/checkpass.sh'
+      binary: path.resolve(imageRoot, 'usr/bin/checkpass.sh')
     },
+
     config: {
-      file: '/etc/skylark_config.json',
-      confd: '/etc/skylark/conf.d/',
-      write_path: '/mnt/conf/etc/',
-      write_config: '/mnt/conf/etc/skylark_config.json'
+      file: path.resolve(imageRoot, 'etc/skylark_config.json'),
+      confd: path.resolve(imageRoot, 'etc/skylark/conf.d/'),
+      write_path: path.resolve(imageRoot, 'mnt/conf/etc/'),
+      write_config: path.resolve(imageRoot, 'mnt/conf/etc/skylark_config.json')
     }
   }
 }

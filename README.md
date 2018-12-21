@@ -16,18 +16,24 @@ npm install
 npm run build
 
 # Build packages
-./build.sh
+./bin/build.sh
 ```
 
-## Running
+## Development
 
-`npm run serve`
+```
+# Set up development environment target
+./bin/dev.sh
+
+# Start server
+SKYLARK_DEVELOPMENT=true npm run serve
+```
 
 Launches at http://localhost:8080 by default
 
 ## Packaging
 
-To create a packaged distribution, run: `./pack.sh`
+To create a packaged distribution, run: `./bin/pack.sh`
 
 **Work in progress**
 

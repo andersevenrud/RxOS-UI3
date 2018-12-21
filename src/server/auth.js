@@ -11,9 +11,10 @@ const login = (binary, username, password) => new Promise((resolve, reject) => {
 module.exports = (core, config) => ({
   login: (req, res) => {
     const {username, password} = req.body;
-    const {test, binary} = core.config('skylark.auth');
+    const {development} = core.config('skylark');
+    const {binary} = core.config('skylark.auth');
 
-    if (test) {
+    if (development) {
       return Promise.resolve({
         id: 1,
         username,

@@ -7,9 +7,9 @@ class SkylarkServiceProvider {
   constructor(core, options = {}) {
     this.core = core;
     this.options = options;
-    this.config = new SkylarkConfiguration();
-    this.telemetry = new SkylarkTelemetry();
-    this.odnn = new SkylarkOndd();
+    this.config = new SkylarkConfiguration(core);
+    this.telemetry = new SkylarkTelemetry(core);
+    this.odnn = new SkylarkOndd(core);
   }
 
   provides() {

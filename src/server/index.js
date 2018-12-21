@@ -70,4 +70,8 @@ process.on('exit', () => osjs.destroy());
 process.on('uncaughtException', e => console.error(e));
 process.on('unhandledRejection', e => console.error(e));
 
+if (config.skylark.development) {
+  console.log('*** LAUNCHED IN DEVELOPMENT MODE ***');
+}
+
 osjs.boot();

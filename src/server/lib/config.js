@@ -1,10 +1,14 @@
+const fs = require('fs-extra');
+
 class SkylarkConfiguration {
-  constructor() {
+  constructor(core) {
+    this.core = core;
     this.config = {};
   }
 
   init() {
-    return Promise.resolve();
+    return fs.readJson(this.core.config('skylark.config.file'))
+      .then(config => (this.config = config));
   }
 
   set(config) {
