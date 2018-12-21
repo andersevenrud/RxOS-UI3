@@ -51,6 +51,7 @@ import {
 import {PanelServiceProvider} from '@osjs/panels';
 import {GUIServiceProvider} from '@osjs/gui';
 import {DialogServiceProvider} from '@osjs/dialogs';
+import {SkylarkServiceProvider} from './provider.js';
 import * as config from './config.js';
 
 const init = () => {
@@ -68,6 +69,7 @@ const init = () => {
   osjs.register(PanelServiceProvider);
   osjs.register(DialogServiceProvider);
   osjs.register(GUIServiceProvider);
+  osjs.register(SkylarkServiceProvider);
 
   osjs.boot();
 };
