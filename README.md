@@ -11,12 +11,6 @@ Node 8 or above
 ```
 # Install dependencies
 npm install
-
-# Build client
-npm run build
-
-# Build packages
-./bin/build.sh
 ```
 
 ## Development
@@ -24,6 +18,12 @@ npm run build
 ```
 # Set up development environment target
 ./bin/dev.sh
+
+# Build packages
+./bin/build.sh
+
+# Build client
+SKYLARK_DEVELOPMENT=true npm run build
 
 # Start server
 SKYLARK_DEVELOPMENT=true npm run serve

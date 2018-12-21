@@ -33,11 +33,20 @@
 // https://manual.os-js.org/v3/config/#client
 //
 
+const development = process.env.SKYLARK_DEVELOPMENT === 'true';
+const login = development
+  ? {username: 'guest', password: 'guest'}
+  : {};
+
 module.exports = {
   auth: {
-    login: {
-      username: 'guest',
-      password: 'guest'
+    login,
+    ui: {
+      title: '',
+      logo: {
+        position: 'top',
+        src: require('./splash.png')
+      }
     }
   },
   desktop: {
