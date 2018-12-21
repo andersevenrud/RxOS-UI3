@@ -54,7 +54,9 @@ import {DialogServiceProvider} from '@osjs/dialogs';
 import * as config from './config.js';
 
 const init = () => {
-  const osjs = new Core(config, {});
+  const osjs = new Core(config, {
+    omit: ['vfs.mountpoints']
+  });
 
   // Register your service providers
   osjs.register(CoreServiceProvider);

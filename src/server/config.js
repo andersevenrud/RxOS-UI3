@@ -38,6 +38,21 @@ const root = path.resolve(__dirname, '../../');
 
 module.exports = {
   root,
-  port: 8000,
-  public: path.resolve(root, 'dist')
+  port: 8080,
+  public: path.resolve(root, 'dist'),
+  vfs: {
+    root: '/home',
+    mountpoints: [{
+      name: 'downloads',
+      attributes: {
+        root: '/mnt/downloads'
+      }
+    }]
+  },
+  skylark: {
+    auth: {
+      test: true,
+      binary: '/usr/bin/checkpass.sh'
+    }
+  }
 }

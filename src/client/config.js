@@ -36,8 +36,45 @@
 module.exports = {
   auth: {
     login: {
-      username: 'demo',
-      password: 'demo'
+      username: 'guest',
+      password: 'guest'
     }
+  },
+  desktop: {
+    lock: true,
+    contextmenu: {
+      enabled: true,
+      defaults: false
+    },
+
+    settings: {
+      background: {
+        src: require('./wallpaper.png'),
+        color: '#089bd2',
+        style: 'cover'
+      },
+      iconview: {
+        enabled: false
+      }
+    }
+  },
+  vfs: {
+    defaultPath: 'home:/',
+    mountpoints: [{
+      name: 'osjs',
+      label: 'Skylark',
+      adapter: 'system',
+      icon: {name: 'folder-publicshare'}
+    }, {
+      name: 'home',
+      label: 'Home',
+      adapter: 'system',
+      icon: {name: 'user-home'}
+    }, {
+      name: 'downloads',
+      label: 'Downloads',
+      adapter: 'system',
+      icon: {name: 'user-home'}
+    }]
   }
 };

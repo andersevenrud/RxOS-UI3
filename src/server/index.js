@@ -48,12 +48,18 @@ const {
 } = require('@osjs/server');
 
 const config = require('./config.js');
+const auth = require('./auth.js');
+
 const osjs = new Core(config, {});
 
 osjs.register(CoreServiceProvider, {before: true});
 osjs.register(PackageServiceProvider);
 osjs.register(VFSServiceProvider);
-osjs.register(AuthServiceProvider);
+osjs.register(AuthServiceProvider, {
+  args: {
+    adapter: auth
+  }
+});
 osjs.register(SettingsServiceProvider);
 
 process.on('SIGTERM', () => osjs.destroy());
