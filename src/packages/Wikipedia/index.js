@@ -18,6 +18,7 @@ const register = (core, args, options, metadata) => {
     const hyperapp = app({
       currentUrl: '',
       listView: listView.state({
+        zebra: false,
         columns: ['Filename']
       })
     }, {
