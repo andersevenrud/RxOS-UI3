@@ -1,0 +1,214 @@
+{
+	"ondd": {
+		"controlSocket": "/var/run/ondd.ctrl",
+		"statusSocket": "/var/run/ondd.status"
+	},
+    "telemetry": {
+        "items": {
+            "snr": "avg",
+            "lock": "hist",
+            "rssi": "avg",
+            "freq": "avg",
+            "freq_offset": "avg",
+            "freq_offset_uc": "avg",
+            "ser": "last",
+            "crc_ok": "last",
+            "crc_err": "last",
+            "state": "hist",
+            "transfers": "last",
+            "count": "sum",
+            "version": "last",
+            "platform": "last",
+            "macid": "last",
+            "lanip": "last",
+            "stream": "hist",
+            "td": "list",
+            "packetrate": "avg",
+            "bitrate": "avg",
+            "audio_bitrate": "avg",
+            "uptime": "last"
+        },
+        "reportingInterval": 300,
+        "collectionInterval": 1000,
+        "idInterface": "wlan0",
+        "userAgent": "Othernet Telemetry Client - HttpLink/3.0",
+        "endPoint": "https://telemetry.othernet.is/Ach3Airie3dahrie9cho/statusdata"
+    },
+	"cmds": {
+		"whatsNew": {
+			"cmd": "/usr/bin/whatsnew.sh",
+			"args": [
+				"3",
+                "300"
+			]
+		},
+		"getAPRS": {
+			"cmd": "/usr/bin/aprs_messages.sh",
+			"args": [
+				"/mnt/downloads/Amateur Radio/APRS/APRSAT",
+                "96",
+                "1000"
+			]
+		},
+		"getMessages": {
+			"cmd": "/usr/bin/messages.sh",
+			"args": [
+                "96",
+                "1000",
+				"/mnt/downloads/Amateur Radio/APRS/APRSAT",
+				"/mnt/downloads/Messages/Twitter"
+			]
+		},
+		"tunerRestart": {
+			"cmd": "/etc/init.d/S90tuner",
+			"args": [
+				"restart"
+			]
+		},
+		"configureWifi": {
+			"cmd": "/usr/sbin/netrestart",
+			"args": []
+		},
+		"dmesg": {
+			"cmd": "dmesg",
+			"args": []
+		},
+		"syslog": {
+			"cmd": "cat",
+			"args": [
+				"/var/log/messages"
+			]
+		},
+		"motd": {
+			"cmd": "cat",
+			"args": [
+				"/etc/motd"
+			]
+		},
+		"top": {
+			"cmd": "top",
+			"args": [
+				"-bn1"
+			]
+		},
+		"systemStatus": {
+			"cmd": "/usr/bin/status",
+			"args": []
+		},
+		"platformRelease": {
+			"cmd": "cat",
+			"args": [
+				"/etc/platform-release"
+			]
+		},
+		"mounts": {
+			"cmd": "cat",
+			"args": [
+				"/proc/mounts"
+			]
+		},
+		"ifconfig": {
+			"cmd": "ifconfig",
+			"args": []
+		},
+		"ipaddr": {
+			"cmd": "ip",
+			"args": [
+				"addr"
+			]
+		},
+		"iproute": {
+			"cmd": "ip",
+			"args": [
+				"route"
+			]
+		},
+		"uptime": {
+			"cmd": "uptime",
+			"args": []
+		},
+		"lnbstatus": {
+			"cmd": "/usr/bin/lnbstatus.sh",
+			"args": []
+		}
+	},
+	"tunerConf": {
+		"beams": {
+			"americas": {
+				"label": "Americas",
+				"value": "americas",
+				"freq": "11.9024",
+				"beamtype": "228"
+			},
+			"custom": {
+				"label": "Custom",
+				"value": "custom",
+				"freq": "11.9024",
+				"beamtype": "247"
+			}
+		},
+		"selectedBeam": "americas",
+        "antennaTypes": {
+            "active" : {
+                "label": "Active Antenna",
+                "value": "active"
+            },
+            "passive" : {
+                "label": "Passive Antenna",
+                "value": "passive"
+            }
+        },
+        "selectedAntenna" : "active",
+        "LNBs": {
+            "mk1" : {
+                "label": "Maverick 1",
+                "value": "mk1"
+            },
+            "sy118u" : {
+                "label": "Shenyang KI-118U",
+                "value": "sy118u"
+            }
+        },
+        "selectedLNB" : "mk1"
+	},
+	"netConf": {
+        "hostname" : "othernet",
+		"mode": "ap",
+		"modes": {
+			"ap": {
+				"label": "Create a Hotspot",
+				"value": "ap"
+			},
+			"sta": {
+				"label": "Connect to a Wifi router",
+				"value": "sta"
+			}
+		},
+		"ap": {
+			"ssid": "Othernet",
+			"hidden": false,
+			"selectedCountry": null,
+			"selectedChannel": "6",
+			"channels": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			],
+			"securityEnabled": false,
+			"password": ""
+		},
+		"sta": {
+			"ssid": "",
+			"password": ""
+		}
+	},
+    "overRides" : [ "netConf.hostname", "netConf.mode", "netConf.sta", "netConf.ap", "tunerConf.selectedBeam", "tunerConf.beams.custom", "tunerConf.selectedAntenna" , "tunerConf.selectedLNB" ]
+}

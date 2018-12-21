@@ -1,0 +1,1020 @@
+{
+			"netConf.ap.countries": [
+				{
+					"code": "none",
+					"name": "(World/default)"
+				},
+				{
+					"code": "AF",
+					"name": "Afghanistan , Islamic Republic of"
+				},
+				{
+					"code": "AL",
+					"name": "Albania , Republic of"
+				},
+				{
+					"code": "DZ",
+					"name": "Algeria , People's Democratic Republic of"
+				},
+				{
+					"code": "AS",
+					"name": "American Samoa"
+				},
+				{
+					"code": "AD",
+					"name": "Andorra , Principality of"
+				},
+				{
+					"code": "AO",
+					"name": "Angola , Republic of"
+				},
+				{
+					"code": "AI",
+					"name": "Anguilla"
+				},
+				{
+					"code": "AG",
+					"name": "Antigua and Barbuda"
+				},
+				{
+					"code": "AR",
+					"name": "Argentina , Argentine Republic"
+				},
+				{
+					"code": "AM",
+					"name": "Armenia , Republic of"
+				},
+				{
+					"code": "AW",
+					"name": "Aruba"
+				},
+				{
+					"code": "AU",
+					"name": "Australia , Commonwealth of"
+				},
+				{
+					"code": "AT",
+					"name": "Austria , Republic of"
+				},
+				{
+					"code": "AZ",
+					"name": "Azerbaijan , Republic of"
+				},
+				{
+					"code": "BS",
+					"name": "Bahamas , Commonwealth of the"
+				},
+				{
+					"code": "BH",
+					"name": "Bahrain , Kingdom of"
+				},
+				{
+					"code": "BD",
+					"name": "Bangladesh , People's Republic of"
+				},
+				{
+					"code": "BB",
+					"name": "Barbados"
+				},
+				{
+					"code": "BY",
+					"name": "Belarus , Republic of"
+				},
+				{
+					"code": "BE",
+					"name": "Belgium , Kingdom of"
+				},
+				{
+					"code": "BZ",
+					"name": "Belize"
+				},
+				{
+					"code": "BJ",
+					"name": "Benin , Republic of"
+				},
+				{
+					"code": "BM",
+					"name": "Bermuda"
+				},
+				{
+					"code": "BT",
+					"name": "Bhutan , Kingdom of"
+				},
+				{
+					"code": "BO",
+					"name": "Bolivia , Republic of"
+				},
+				{
+					"code": "BQ",
+					"name": "Bonaire , Sint Eustatius and Saba"
+				},
+				{
+					"code": "BA",
+					"name": "Bosnia and Herzegovina"
+				},
+				{
+					"code": "BW",
+					"name": "Botswana , Republic of"
+				},
+				{
+					"code": "BV",
+					"name": "Bouvet Island (Bouvetoya)"
+				},
+				{
+					"code": "BR",
+					"name": "Brazil , Federative Republic of"
+				},
+				{
+					"code": "IO",
+					"name": "British Indian Ocean Territory (Chagos Archipelago)"
+				},
+				{
+					"code": "VG",
+					"name": "British Virgin Islands"
+				},
+				{
+					"code": "BN",
+					"name": "Brunei Darussalam"
+				},
+				{
+					"code": "BG",
+					"name": "Bulgaria , Republic of"
+				},
+				{
+					"code": "BF",
+					"name": "Burkina Faso"
+				},
+				{
+					"code": "BI",
+					"name": "Burundi , Republic of"
+				},
+				{
+					"code": "KH",
+					"name": "Cambodia , Kingdom of"
+				},
+				{
+					"code": "CM",
+					"name": "Cameroon , Republic of"
+				},
+				{
+					"code": "CA",
+					"name": "Canada"
+				},
+				{
+					"code": "CV",
+					"name": "Cape Verde , Republic of"
+				},
+				{
+					"code": "KY",
+					"name": "Cayman Islands"
+				},
+				{
+					"code": "CF",
+					"name": "Central African Republic"
+				},
+				{
+					"code": "TD",
+					"name": "Chad , Republic of"
+				},
+				{
+					"code": "CL",
+					"name": "Chile , Republic of"
+				},
+				{
+					"code": "CN",
+					"name": "China , People's Republic of"
+				},
+				{
+					"code": "CX",
+					"name": "Christmas Island"
+				},
+				{
+					"code": "CC",
+					"name": "Cocos (Keeling) Islands"
+				},
+				{
+					"code": "CO",
+					"name": "Colombia , Republic of"
+				},
+				{
+					"code": "KM",
+					"name": "Comoros , Union of the"
+				},
+				{
+					"code": "CD",
+					"name": "Congo , Democratic Republic of the"
+				},
+				{
+					"code": "CG",
+					"name": "Congo , Republic of the"
+				},
+				{
+					"code": "CK",
+					"name": "Cook Islands"
+				},
+				{
+					"code": "CR",
+					"name": "Costa Rica , Republic of"
+				},
+				{
+					"code": "CI",
+					"name": "Cote d'Ivoire , Republic of"
+				},
+				{
+					"code": "HR",
+					"name": "Croatia , Republic of"
+				},
+				{
+					"code": "CU",
+					"name": "Cuba , Republic of"
+				},
+				{
+					"code": "CW",
+					"name": "Curaçao"
+				},
+				{
+					"code": "CY",
+					"name": "Cyprus , Republic of"
+				},
+				{
+					"code": "CZ",
+					"name": "Czech Republic"
+				},
+				{
+					"code": "DK",
+					"name": "Denmark , Kingdom of"
+				},
+				{
+					"code": "XX",
+					"name": "Disputed Territory"
+				},
+				{
+					"code": "DJ",
+					"name": "Djibouti , Republic of"
+				},
+				{
+					"code": "DM",
+					"name": "Dominica , Commonwealth of"
+				},
+				{
+					"code": "DO",
+					"name": "Dominican Republic"
+				},
+				{
+					"code": "EC",
+					"name": "Ecuador , Republic of"
+				},
+				{
+					"code": "EG",
+					"name": "Egypt , Arab Republic of"
+				},
+				{
+					"code": "SV",
+					"name": "El Salvador , Republic of"
+				},
+				{
+					"code": "GQ",
+					"name": "Equatorial Guinea , Republic of"
+				},
+				{
+					"code": "ER",
+					"name": "Eritrea , State of"
+				},
+				{
+					"code": "EE",
+					"name": "Estonia , Republic of"
+				},
+				{
+					"code": "ET",
+					"name": "Ethiopia , Federal Democratic Republic of"
+				},
+				{
+					"code": "FK",
+					"name": "Falkland Islands (Malvinas)"
+				},
+				{
+					"code": "FO",
+					"name": "Faroe Islands"
+				},
+				{
+					"code": "FJ",
+					"name": "Fiji , Republic of the Fiji Islands"
+				},
+				{
+					"code": "FI",
+					"name": "Finland , Republic of"
+				},
+				{
+					"code": "FR",
+					"name": "France , French Republic"
+				},
+				{
+					"code": "GF",
+					"name": "French Guiana"
+				},
+				{
+					"code": "PF",
+					"name": "French Polynesia"
+				},
+				{
+					"code": "TF",
+					"name": "French Southern Territories"
+				},
+				{
+					"code": "GA",
+					"name": "Gabon , Gabonese Republic"
+				},
+				{
+					"code": "GM",
+					"name": "Gambia , Republic of the"
+				},
+				{
+					"code": "GE",
+					"name": "Georgia"
+				},
+				{
+					"code": "DE",
+					"name": "Germany , Federal Republic of"
+				},
+				{
+					"code": "GH",
+					"name": "Ghana , Republic of"
+				},
+				{
+					"code": "GI",
+					"name": "Gibraltar"
+				},
+				{
+					"code": "GR",
+					"name": "Greece , Hellenic Republic"
+				},
+				{
+					"code": "GL",
+					"name": "Greenland"
+				},
+				{
+					"code": "GD",
+					"name": "Grenada"
+				},
+				{
+					"code": "GP",
+					"name": "Guadeloupe"
+				},
+				{
+					"code": "GU",
+					"name": "Guam"
+				},
+				{
+					"code": "GT",
+					"name": "Guatemala , Republic of"
+				},
+				{
+					"code": "GG",
+					"name": "Guernsey , Bailiwick of"
+				},
+				{
+					"code": "GN",
+					"name": "Guinea , Republic of"
+				},
+				{
+					"code": "GW",
+					"name": "Guinea-Bissau , Republic of"
+				},
+				{
+					"code": "GY",
+					"name": "Guyana , Co-operative Republic of"
+				},
+				{
+					"code": "HT",
+					"name": "Haiti , Republic of"
+				},
+				{
+					"code": "HM",
+					"name": "Heard Island and McDonald Islands"
+				},
+				{
+					"code": "VA",
+					"name": "Holy See (Vatican City State)"
+				},
+				{
+					"code": "HN",
+					"name": "Honduras , Republic of"
+				},
+				{
+					"code": "HK",
+					"name": "Hong Kong , Special Administrative Region of China"
+				},
+				{
+					"code": "HU",
+					"name": "Hungary , Republic of"
+				},
+				{
+					"code": "IS",
+					"name": "Iceland , Republic of"
+				},
+				{
+					"code": "IN",
+					"name": "India , Republic of"
+				},
+				{
+					"code": "ID",
+					"name": "Indonesia , Republic of"
+				},
+				{
+					"code": "IR",
+					"name": "Iran , Islamic Republic of"
+				},
+				{
+					"code": "IQ",
+					"name": "Iraq , Republic of"
+				},
+				{
+					"code": "XE",
+					"name": "Iraq-Saudi Arabia Neutral Zone"
+				},
+				{
+					"code": "IE",
+					"name": "Ireland"
+				},
+				{
+					"code": "IM",
+					"name": "Isle of Man"
+				},
+				{
+					"code": "IL",
+					"name": "Israel , State of"
+				},
+				{
+					"code": "IT",
+					"name": "Italy , Italian Republic"
+				},
+				{
+					"code": "JM",
+					"name": "Jamaica"
+				},
+				{
+					"code": "JP",
+					"name": "Japan"
+				},
+				{
+					"code": "JE",
+					"name": "Jersey , Bailiwick of"
+				},
+				{
+					"code": "JO",
+					"name": "Jordan , Hashemite Kingdom of"
+				},
+				{
+					"code": "KZ",
+					"name": "Kazakhstan , Republic of"
+				},
+				{
+					"code": "KE",
+					"name": "Kenya , Republic of"
+				},
+				{
+					"code": "KI",
+					"name": "Kiribati , Republic of"
+				},
+				{
+					"code": "KP",
+					"name": "Korea , Democratic People's Republic of"
+				},
+				{
+					"code": "KR",
+					"name": "Korea , Republic of"
+				},
+				{
+					"code": "KW",
+					"name": "Kuwait , State of"
+				},
+				{
+					"code": "KG",
+					"name": "Kyrgyz Republic"
+				},
+				{
+					"code": "LA",
+					"name": "Lao People's Democratic Republic"
+				},
+				{
+					"code": "LV",
+					"name": "Latvia , Republic of"
+				},
+				{
+					"code": "LB",
+					"name": "Lebanon , Lebanese Republic"
+				},
+				{
+					"code": "LS",
+					"name": "Lesotho , Kingdom of"
+				},
+				{
+					"code": "LR",
+					"name": "Liberia , Republic of"
+				},
+				{
+					"code": "LY",
+					"name": "Libyan Arab Jamahiriya"
+				},
+				{
+					"code": "LI",
+					"name": "Liechtenstein , Principality of"
+				},
+				{
+					"code": "LT",
+					"name": "Lithuania , Republic of"
+				},
+				{
+					"code": "LU",
+					"name": "Luxembourg , Grand Duchy of"
+				},
+				{
+					"code": "MO",
+					"name": "Macao , Special Administrative Region of China"
+				},
+				{
+					"code": "MK",
+					"name": "Macedonia , The Former Yugoslav Republic of"
+				},
+				{
+					"code": "MG",
+					"name": "Madagascar , Republic of"
+				},
+				{
+					"code": "MW",
+					"name": "Malawi , Republic of"
+				},
+				{
+					"code": "MY",
+					"name": "Malaysia"
+				},
+				{
+					"code": "MV",
+					"name": "Maldives , Republic of"
+				},
+				{
+					"code": "ML",
+					"name": "Mali , Republic of"
+				},
+				{
+					"code": "MT",
+					"name": "Malta , Republic of"
+				},
+				{
+					"code": "MH",
+					"name": "Marshall Islands , Republic of the"
+				},
+				{
+					"code": "MQ",
+					"name": "Martinique"
+				},
+				{
+					"code": "MR",
+					"name": "Mauritania , Islamic Republic of"
+				},
+				{
+					"code": "MU",
+					"name": "Mauritius , Republic of"
+				},
+				{
+					"code": "YT",
+					"name": "Mayotte"
+				},
+				{
+					"code": "MX",
+					"name": "Mexico , United Mexican States"
+				},
+				{
+					"code": "FM",
+					"name": "Micronesia , Federated States of"
+				},
+				{
+					"code": "MD",
+					"name": "Moldova , Republic of"
+				},
+				{
+					"code": "MC",
+					"name": "Monaco , Principality of"
+				},
+				{
+					"code": "MN",
+					"name": "Mongolia"
+				},
+				{
+					"code": "ME",
+					"name": "Montenegro , Republic of"
+				},
+				{
+					"code": "MS",
+					"name": "Montserrat"
+				},
+				{
+					"code": "MA",
+					"name": "Morocco , Kingdom of"
+				},
+				{
+					"code": "MZ",
+					"name": "Mozambique , Republic of"
+				},
+				{
+					"code": "MM",
+					"name": "Myanmar , Union of"
+				},
+				{
+					"code": "NA",
+					"name": "Namibia , Republic of"
+				},
+				{
+					"code": "NR",
+					"name": "Nauru , Republic of"
+				},
+				{
+					"code": "NP",
+					"name": "Nepal , State of"
+				},
+				{
+					"code": "NL",
+					"name": "Netherlands , Kingdom of the"
+				},
+				{
+					"code": "AN",
+					"name": "Netherlands Antilles"
+				},
+				{
+					"code": "NC",
+					"name": "New Caledonia"
+				},
+				{
+					"code": "NZ",
+					"name": "New Zealand"
+				},
+				{
+					"code": "NI",
+					"name": "Nicaragua , Republic of"
+				},
+				{
+					"code": "NE",
+					"name": "Niger , Republic of"
+				},
+				{
+					"code": "NG",
+					"name": "Nigeria , Federal Republic of"
+				},
+				{
+					"code": "NU",
+					"name": "Niue"
+				},
+				{
+					"code": "NF",
+					"name": "Norfolk Island"
+				},
+				{
+					"code": "MP",
+					"name": "Northern Mariana Islands , Commonwealth of the"
+				},
+				{
+					"code": "NO",
+					"name": "Norway , Kingdom of"
+				},
+				{
+					"code": "OM",
+					"name": "Oman , Sultanate of"
+				},
+				{
+					"code": "PK",
+					"name": "Pakistan , Islamic Republic of"
+				},
+				{
+					"code": "PW",
+					"name": "Palau , Republic of"
+				},
+				{
+					"code": "PS",
+					"name": "Palestinian Territory , Occupied"
+				},
+				{
+					"code": "PA",
+					"name": "Panama , Republic of"
+				},
+				{
+					"code": "PG",
+					"name": "Papua New Guinea , Independent State of"
+				},
+				{
+					"code": "PY",
+					"name": "Paraguay , Republic of"
+				},
+				{
+					"code": "PE",
+					"name": "Peru , Republic of"
+				},
+				{
+					"code": "PH",
+					"name": "Philippines , Republic of the"
+				},
+				{
+					"code": "PN",
+					"name": "Pitcairn Islands"
+				},
+				{
+					"code": "PL",
+					"name": "Poland , Republic of"
+				},
+				{
+					"code": "PT",
+					"name": "Portugal , Portuguese Republic"
+				},
+				{
+					"code": "PR",
+					"name": "Puerto Rico , Commonwealth of"
+				},
+				{
+					"code": "QA",
+					"name": "Qatar , State of"
+				},
+				{
+					"code": "RE",
+					"name": "Reunion"
+				},
+				{
+					"code": "RO",
+					"name": "Romania"
+				},
+				{
+					"code": "RU",
+					"name": "Russian Federation"
+				},
+				{
+					"code": "RW",
+					"name": "Rwanda , Republic of"
+				},
+				{
+					"code": "BL",
+					"name": "Saint Barthelemy"
+				},
+				{
+					"code": "SH",
+					"name": "Saint Helena"
+				},
+				{
+					"code": "KN",
+					"name": "Saint Kitts and Nevis , Federation of"
+				},
+				{
+					"code": "LC",
+					"name": "Saint Lucia"
+				},
+				{
+					"code": "MF",
+					"name": "Saint Martin"
+				},
+				{
+					"code": "PM",
+					"name": "Saint Pierre and Miquelon"
+				},
+				{
+					"code": "VC",
+					"name": "Saint Vincent and the Grenadines"
+				},
+				{
+					"code": "WS",
+					"name": "Samoa , Independent State of"
+				},
+				{
+					"code": "SM",
+					"name": "San Marino , Republic of"
+				},
+				{
+					"code": "ST",
+					"name": "Sao Tome and Principe , Democratic Republic of"
+				},
+				{
+					"code": "SA",
+					"name": "Saudi Arabia , Kingdom of"
+				},
+				{
+					"code": "SN",
+					"name": "Senegal , Republic of"
+				},
+				{
+					"code": "RS",
+					"name": "Serbia , Republic of"
+				},
+				{
+					"code": "SC",
+					"name": "Seychelles , Republic of"
+				},
+				{
+					"code": "SL",
+					"name": "Sierra Leone , Republic of"
+				},
+				{
+					"code": "SG",
+					"name": "Singapore , Republic of"
+				},
+				{
+					"code": "SX",
+					"name": "Sint Maarten (Netherlands)"
+				},
+				{
+					"code": "SK",
+					"name": "Slovakia (Slovak Republic)"
+				},
+				{
+					"code": "SI",
+					"name": "Slovenia , Republic of"
+				},
+				{
+					"code": "SB",
+					"name": "Solomon Islands"
+				},
+				{
+					"code": "SO",
+					"name": "Somalia , Somali Republic"
+				},
+				{
+					"code": "ZA",
+					"name": "South Africa , Republic of"
+				},
+				{
+					"code": "GS",
+					"name": "South Georgia and the South Sandwich Islands"
+				},
+				{
+					"code": "SS",
+					"name": "South Sudan"
+				},
+				{
+					"code": "ES",
+					"name": "Spain , Kingdom of"
+				},
+				{
+					"code": "XS",
+					"name": "Spratly Islands"
+				},
+				{
+					"code": "LK",
+					"name": "Sri Lanka , Democratic Socialist Republic of"
+				},
+				{
+					"code": "SD",
+					"name": "Sudan , Republic of"
+				},
+				{
+					"code": "SR",
+					"name": "Suriname , Republic of"
+				},
+				{
+					"code": "SJ",
+					"name": "Svalbard & Jan Mayen Islands"
+				},
+				{
+					"code": "SZ",
+					"name": "Swaziland , Kingdom of"
+				},
+				{
+					"code": "SE",
+					"name": "Sweden , Kingdom of"
+				},
+				{
+					"code": "CH",
+					"name": "Switzerland , Swiss Confederation"
+				},
+				{
+					"code": "SY",
+					"name": "Syrian Arab Republic"
+				},
+				{
+					"code": "TW",
+					"name": "Taiwan"
+				},
+				{
+					"code": "TJ",
+					"name": "Tajikistan , Republic of"
+				},
+				{
+					"code": "TZ",
+					"name": "Tanzania , United Republic of"
+				},
+				{
+					"code": "TH",
+					"name": "Thailand , Kingdom of"
+				},
+				{
+					"code": "TL",
+					"name": "Timor-Leste , Democratic Republic of"
+				},
+				{
+					"code": "TG",
+					"name": "Togo , Togolese Republic"
+				},
+				{
+					"code": "TK",
+					"name": "Tokelau"
+				},
+				{
+					"code": "TO",
+					"name": "Tonga , Kingdom of"
+				},
+				{
+					"code": "TT",
+					"name": "Trinidad and Tobago , Republic of"
+				},
+				{
+					"code": "TN",
+					"name": "Tunisia , Tunisian Republic"
+				},
+				{
+					"code": "TR",
+					"name": "Turkey , Republic of"
+				},
+				{
+					"code": "TM",
+					"name": "Turkmenistan"
+				},
+				{
+					"code": "TC",
+					"name": "Turks and Caicos Islands"
+				},
+				{
+					"code": "TV",
+					"name": "Tuvalu"
+				},
+				{
+					"code": "UG",
+					"name": "Uganda , Republic of"
+				},
+				{
+					"code": "UA",
+					"name": "Ukraine"
+				},
+				{
+					"code": "AE",
+					"name": "United Arab Emirates"
+				},
+				{
+					"code": "GB",
+					"name": "United Kingdom"
+				},
+				{
+					"code": "XD",
+					"name": "United Nations Neutral Zone"
+				},
+				{
+					"code": "US",
+					"name": "United States"
+				},
+				{
+					"code": "UM",
+					"name": "United States Minor Outlying Islands"
+				},
+				{
+					"code": "VI",
+					"name": "United States Virgin Islands"
+				},
+				{
+					"code": "UY",
+					"name": "Uruguay , Eastern Republic of"
+				},
+				{
+					"code": "UZ",
+					"name": "Uzbekistan , Republic of"
+				},
+				{
+					"code": "VU",
+					"name": "Vanuatu , Republic of"
+				},
+				{
+					"code": "VE",
+					"name": "Venezuela , Bolivarian Republic of"
+				},
+				{
+					"code": "VN",
+					"name": "Vietnam , Socialist Republic of"
+				},
+				{
+					"code": "WF",
+					"name": "Wallis and Futuna"
+				},
+				{
+					"code": "EH",
+					"name": "Western Sahara"
+				},
+				{
+					"code": "YE",
+					"name": "Yemen"
+				},
+				{
+					"code": "ZM",
+					"name": "Zambia , Republic of"
+				},
+				{
+					"code": "ZW",
+					"name": "Zimbabwe , Republic of"
+				},
+				{
+					"code": "AX",
+					"name": "Åland Islands"
+				}
+			]
+}

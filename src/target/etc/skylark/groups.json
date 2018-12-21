@@ -1,0 +1,4 @@
+{
+    "othernet": [ "admin" ],
+    "guest": [ "demo", "fs", "application", "api", "read", "exists", "find", "fileinfo", "scandir", "freeSpace" ]
+}
