@@ -3,11 +3,9 @@ import {h, app} from 'hyperapp';
 import {Box, Menubar, MenubarItem, Iframe} from '@osjs/gui';
 import {name as applicationName} from './metadata.json';
 
-
-
-const viewerjs = (mime, u) => `ViewerJS/index.html#/${encodeURIComponent((u))}`;
-const epubjs = (mime, u) => `epub.js/index.html?(mime, u)=${encodeURIComponent((u))}`;
-const showdown = (mime, u) => `showdown/index.html?(mime, u)=${encodeURIComponent((u))}`;
+const viewerjs = (mime, u) => `ViewerJS/index.html#${u}`;
+const epubjs = (mime, u) => `epub.js/index.html?u=${encodeURIComponent(u)}`;
+const showdown = (mime, u) => `showdown/index.html?u=${encodeURIComponent(u)}`;
 const playerjs = (mime, u) => mime.match(/^audio/)
   ? `MediaElement/index.html?type=audio&u=${encodeURIComponent(u)}`
   : `MediaElement/index.html?type=video&u=${encodeURIComponent(u)}`;
@@ -25,11 +23,18 @@ const mimeMap = {
 };
 
 const resolver = proc => (file, uri) => {
+  const resolve = u => proc.resource(u);
+
   if (mimeMap[file.mime]) {
-    return proc.resource(mimeMap[file.mime](file.mime, uri));
+    return resolve(mimeMap[file.mime](file.mime, uri));
   }
 
-  return uri;
+  const matched = Object.keys(mimeMap)
+    .find(re => file.mime.match(re));
+
+  return matched
+    ? resolve(mimeMap[matched](file.mime, uri))
+    : uri;
 };
 
 const register = (core, args, options, metadata) => {

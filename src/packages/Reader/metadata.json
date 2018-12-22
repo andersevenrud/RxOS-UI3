@@ -2,7 +2,6 @@
   "type": "application",
   "name": "Reader",
   "category": "utilities",
-  "singleton": true,
   "icon": "icon.png",
   "title": {
     "en_EN": "Reader"
