@@ -2,6 +2,7 @@
   "type": "application",
   "name": "Tuner",
   "category": "utilities",
+  "singleton": true,
   "icon": "icon.png",
   "title": {
     "en_EN": "Tuner"
