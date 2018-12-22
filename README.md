@@ -49,6 +49,8 @@ The distribution will be output to `dist.packed/`.
 * [x] Distro: Packaging script
 * [ ] Service: Config (**in progress**)
 * [ ] Service: Telemetry (**in progress**)
+* [ ] Service: Commands (**in progress**)
+* [ ] Service: ONDD (**in progress**)
 * [ ] App: LogViewer
 * [ ] App: Messaging
 * [ ] App: Network
@@ -57,7 +59,7 @@ The distribution will be output to `dist.packed/`.
 * [ ] App: Reader
 * [ ] App: Tuner (**in progress**)
 * [x] App: Weather
-* [ ] App: WhatsNew
+* [x] App: WhatsNew
 * [x] App: Wikipedia
 
 ## Notes

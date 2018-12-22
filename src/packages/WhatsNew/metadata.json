@@ -1,0 +1,16 @@
+{
+  "type": "application",
+  "name": "WhatsNew",
+  "category": "utilities",
+  "singleton": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "WhatsNew"
+  },
+  "description": {
+    "en_EN": "WhatsNew"
+  },
+  "files": [
+    "main.js"
+  ]
+}

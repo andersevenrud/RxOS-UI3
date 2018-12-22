@@ -10,7 +10,8 @@ export class SkylarkServiceProvider {
   provides() {
     return [
       'skylark/config',
-      'skylark/odnn'
+      'skylark/odnn',
+      'skylark/command'
     ];
   }
 
@@ -29,6 +30,10 @@ export class SkylarkServiceProvider {
     this.core.singleton('skylark/odnn', () => ({
       status: () => request('GET', '/skylark/ondd')
     }));
+
+    this.core.singleton('skylark/command', (name, ...args) => {
+      return request('POST', '/skylark/command', {name, args});
+    });
 
     return Promise.resolve();
   }
