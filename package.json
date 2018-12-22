@@ -62,7 +62,7 @@
     "@osjs/htmlviewer-application": "^1.2.2",
     "@osjs/panels": "^3.0.6",
     "@osjs/preview-application": "^1.1.10",
-    "@osjs/server": "^3.0.12",
+    "@osjs/server": "^3.0.13",
     "@osjs/standard-theme": "^4.0.3",
     "@osjs/textpad-application": "^1.2.2",
     "hyperapp": "^1.2.9",
