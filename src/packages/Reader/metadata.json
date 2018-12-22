@@ -1,0 +1,38 @@
+{
+  "type": "application",
+  "name": "Reader",
+  "category": "utilities",
+  "singleton": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Reader"
+  },
+  "description": {
+    "en_EN": "Reader"
+  },
+  "mimes": [
+    "text\/htm",
+    "text\/html",
+    "application\/pdf",
+    "application\/vnd.oasis.opendocument.presentation",
+    "application\/vnd.oasis.opendocument.spreadsheet",
+    "application\/vnd.oasis.opendocument.text",
+    "video\/ogg",
+    "video\/mp4",
+    "video\/webm",
+    "video\/ogv",
+    "audio\/mp3",
+    "audio\/mpeg",
+    "audio\/oga",
+    "audio\/ogg",
+    "audio\/wav",
+    "text\/vtt",
+    "text\/srt",
+    "application\/epub+zip",
+    "application\/epub",
+    "text\/markdown"
+  ],
+  "files": [
+    "main.js"
+  ]
+}

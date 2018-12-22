@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<script src="showdown.min.js"></script>
+
+<script>
+
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(document.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function reqListener () {
+    var converter = new showdown.Converter();
+    var text = this.responseText;
+    var h = converter.makeHtml(text);
+    document.body.innerHTML = h;
+}
+
+
+var loadMedia = function() {
+    var l = document.location;
+    console.log(document.location.search);
+    var u = getParameterByName('u');
+
+    var r = new XMLHttpRequest();
+    r.addEventListener("load", reqListener);
+    r.open("GET", "/" + encodeURIComponent(u));
+    r.send();
+}
+</script>
+
+</head>
+
+<body onload="loadMedia();">
+</body>
+
+</html>

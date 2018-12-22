@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<script src="mediaelement-and-player.min.js"></script>
+<link href="mediaelementplayer.css" rel="stylesheet">
+
+<script>
+
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(document.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+var loadMedia = function() {
+    var l = document.location;
+    console.log(document.location.search);
+    var u = getParameterByName('u');
+    var h = '';
+    if (getParameterByName('type')=='audio') {
+         h = '<audio src="/' + encodeURIComponent(u) + '" id="#player" controls="true" width: "100%"  autoplay="true"></audio>';
+    } else {
+        h = '<video controls="true" width: "100%" autoplay="true" id="#player"><source src="/' + encodeURIComponent(u) + '" /></video>';
+    }
+    document.body.innerHTML = h;
+    var player = new MediaElementPlayer('#player');
+}
+</script>
+
+</head>
+
+<body onload="loadMedia();">
+<center>
+</center>
+</body>
+
+</html>
+
+
