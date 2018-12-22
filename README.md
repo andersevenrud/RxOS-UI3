@@ -35,7 +35,7 @@ Launches at http://localhost:8080 by default
 
 To create a packaged distribution, run: `./bin/pack.sh`
 
-**Work in progress**
+The distribution will be output to `dist.packed/`.
 
 ## TODO
 
@@ -43,8 +43,8 @@ To create a packaged distribution, run: `./bin/pack.sh`
 * [x] VFS Mountpoints
 * [x] Distro layout
 * [x] Client style configs
-* [ ] Distro: Target files
-* [ ] Distro: Packaging script (**in progress**)
+* [x] Distro: Target files
+* [x] Distro: Packaging script
 * [ ] Service: Config (**in progress**)
 * [ ] Service: Telemetry (**in progress**)
 * [ ] App: LogViewer

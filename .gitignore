@@ -7,3 +7,5 @@ node_modules
 /.env*
 /session-store.db
 /src/packages/*/dist
+/dist
+/dist.packed
