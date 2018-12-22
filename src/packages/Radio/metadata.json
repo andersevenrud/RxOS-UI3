@@ -1,0 +1,16 @@
+{
+  "type": "application",
+  "name": "Radio",
+  "category": "utilities",
+  "singleton": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Radio"
+  },
+  "description": {
+    "en_EN": "Radio"
+  },
+  "files": [
+    "main.js"
+  ]
+}
