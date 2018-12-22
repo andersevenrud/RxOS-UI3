@@ -54,7 +54,7 @@ The distribution will be output to `dist.packed/`.
 * [ ] App: LogViewer
 * [ ] App: Messaging
 * [ ] App: Network
-* [ ] App: News
+* [x] App: News
 * [ ] App: Radio
 * [ ] App: Reader
 * [ ] App: Tuner (**in progress**)

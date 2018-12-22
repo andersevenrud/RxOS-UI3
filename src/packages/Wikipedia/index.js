@@ -12,7 +12,6 @@ import {
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
   const {url, readdir} = core.make('osjs/vfs');
-  const errorDialog = message => core.make('osjs/dialog', 'error', {message});
 
   const render = $content => {
     const hyperapp = app({
@@ -59,19 +58,10 @@ const register = (core, args, options, metadata) => {
   };
 
   const init = () => {
-    let errored = false;
-
     proc.on('load-files', () => {
-      if (errored) {
-        return;
-      }
-
       readdir({path: 'downloads:/'})
         .then(list => proc.emit('render-list', list))
-        .catch(error => {
-          errored = true;
-          errorDialog(error);
-        });
+        .catch(error => console.warn(error));
     });
 
     let interval = setInterval(() => {

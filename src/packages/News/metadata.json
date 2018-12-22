@@ -1,0 +1,16 @@
+{
+  "type": "application",
+  "name": "News",
+  "category": "utilities",
+  "singleton": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "News"
+  },
+  "description": {
+    "en_EN": "News"
+  },
+  "files": [
+    "main.js"
+  ]
+}
