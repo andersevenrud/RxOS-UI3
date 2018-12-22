@@ -25,6 +25,9 @@ const client = {
   devtool: 'source-map',
   entry: {
     osjs: [
+      '@babel/polyfill',
+      'whatwg-fetch',
+      'element-remove',
       path.resolve(__dirname, 'src/client/index.js'),
       path.resolve(__dirname, 'src/client/index.scss')
     ]
