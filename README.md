@@ -61,6 +61,8 @@ The distribution will be output to `dist.packed/`.
 * [x] App: Weather
 * [x] App: WhatsNew
 * [x] App: Wikipedia
+* [ ] Refactor: JSX
+* [ ] Refactor: Data over WS
 
 ## Notes
 

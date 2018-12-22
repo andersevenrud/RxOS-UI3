@@ -59,7 +59,7 @@ const register = (core, args, options, metadata) => {
 
   const init = () => {
     proc.on('load-files', () => {
-      readdir({path: 'downloads:/'})
+      readdir({path: 'downloads:/'}, {filter: iter => iter.mime === 'text/html'})
         .then(list => proc.emit('render-list', list))
         .catch(error => console.warn(error));
     });
