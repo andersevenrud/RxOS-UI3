@@ -20,7 +20,7 @@ if (mode === 'production') {
   }));
 }
 
-module.exports = {
+const client = {
   mode,
   devtool: 'source-map',
   entry: {
@@ -113,3 +113,9 @@ module.exports = {
     ]
   }
 };
+
+module.exports = [
+  client,
+  require('./src/packages/Tuner/webpack.config.js'),
+  require('./src/packages/Wikipedia/webpack.config.js')
+]

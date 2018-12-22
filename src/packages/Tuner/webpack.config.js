@@ -3,10 +3,14 @@ const mode = process.env.NODE_ENV || 'development';
 const minimize = mode === 'production';
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = {
+module.exports = () => ({
   mode,
   devtool: 'source-map',
   entry: path.resolve(__dirname, 'index.js'),
+  context: path.resolve(__dirname),
+  output: {
+    path: path.resolve(__dirname, 'dist')
+  },
   externals: {
     osjs: 'OSjs'
   },
@@ -29,4 +33,4 @@ module.exports = {
       }
     ]
   }
-};
+});

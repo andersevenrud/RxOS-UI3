@@ -13,10 +13,6 @@ mkdir -p $dest_osjs/dist $dest_osjs/src
 # Build client with custom path
 NODE_ENV=production npx webpack --output-path $dest_osjs/dist
 
-# Build packages
-(cd src/packages/Wikipedia && NODE_ENV=production $webpack)
-(cd src/packages/Tuner && NODE_ENV=production $webpack)
-
 # Discover packages with custom paths (including copy)
 npx osjs-cli package:discover --copy --dist $dest_osjs/dist --discover $dest_osjs/packages.json
 
@@ -26,6 +22,10 @@ mkdir -p $dest/mnt/downloads
 
 # Copy OS.js server
 cp -r src/server $dest_osjs/src/
+
+# Copy OS.js deps
+# FIXME
+cp -r node_modules $dest_osjs/
 
 # Copy package server files
 list=$(cat $dest_osjs/packages.json | jq -r '.[]')
