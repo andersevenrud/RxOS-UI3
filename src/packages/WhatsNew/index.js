@@ -3,6 +3,17 @@ import {h, app} from 'hyperapp';
 import {name as applicationName} from './metadata.json';
 import {Box, listView} from '@osjs/gui';
 
+const mapRow = iter => {
+  const d = new Date(iter[0] * 1000);
+  return {
+    labels: [
+      d.toLocaleDateString(),
+      d.toLocaleTimeString(),
+      iter.slice(1).join(',')
+    ]
+  };
+};
+
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
   const command = name => core.make('skylark/command', name);
@@ -10,7 +21,6 @@ const register = (core, args, options, metadata) => {
   let updateInterval;
 
   const poll = () => {
-
     const next = () => {
       updateInterval = setTimeout(() => poll(), 120000);
     };
@@ -18,28 +28,16 @@ const register = (core, args, options, metadata) => {
     command('whatsNew')
       .then(data => {
         const lines = String(data).trim().split('\n');
-
         const rows = lines
           .map(line => line.split(','))
           .filter(iter => !!(iter[0] * 1000))
-          .map(iter => {
-            const d = new Date(iter[0] * 1000);
-            return {
-              labels: [
-                d.toLocaleDateString(),
-                d.toLocaleTimeString(),
-                iter.slice(1).join(',')
-              ]
-            };
-          });
+          .map(mapRow);
 
         proc.on('update-list', rows);
-
         next();
       })
       .catch(error => {
         console.warn(error);
-
         next();
       });
   };

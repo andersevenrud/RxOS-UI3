@@ -1,0 +1,6 @@
+{
+  "name": "@outernet/skylark-messaging-application",
+  "osjs": {
+    "type": "package"
+  }
+}

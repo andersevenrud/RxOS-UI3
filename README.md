@@ -52,7 +52,7 @@ The distribution will be output to `dist.packed/`.
 * [ ] Service: Commands (**in progress**)
 * [ ] Service: ONDD (**in progress**)
 * [ ] App: LogViewer
-* [ ] App: Messaging
+* [x] App: Messaging
 * [ ] App: Network
 * [x] App: News
 * [x] App: Radio
@@ -61,8 +61,10 @@ The distribution will be output to `dist.packed/`.
 * [x] App: Weather
 * [x] App: WhatsNew
 * [x] App: Wikipedia
+* [ ] Corrections: Package metadata
 * [ ] Refactor: JSX
 * [ ] Refactor: Data over WS
+* [ ] Documentation: Developer Documentation
 
 ## Notes
 

@@ -125,5 +125,6 @@ module.exports = [
   require('./src/packages/Reader/webpack.config.js'),
   require('./src/packages/Weather/webpack.config.js'),
   require('./src/packages/WhatsNew/webpack.config.js'),
+  require('./src/packages/Messaging/webpack.config.js'),
   require('./src/packages/Wikipedia/webpack.config.js')
 ]

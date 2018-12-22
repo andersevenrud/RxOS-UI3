@@ -1,0 +1,16 @@
+{
+  "type": "application",
+  "name": "Messaging",
+  "category": "utilities",
+  "singleton": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Messaging"
+  },
+  "description": {
+    "en_EN": "Messaging"
+  },
+  "files": [
+    "main.js"
+  ]
+}
