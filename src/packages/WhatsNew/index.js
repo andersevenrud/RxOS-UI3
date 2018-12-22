@@ -33,7 +33,7 @@ const register = (core, args, options, metadata) => {
           .filter(iter => !!(iter[0] * 1000))
           .map(mapRow);
 
-        proc.on('update-list', rows);
+        proc.emit('update-list', rows);
         next();
       })
       .catch(error => {

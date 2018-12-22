@@ -59,7 +59,7 @@ const register = (core, args, options, metadata) => {
           .map(mapRow)
           .filter(iter => iter !== false);
 
-        proc.on('update-list', rows);
+        proc.emit('update-list', rows);
         next();
       })
       .catch(error => {
