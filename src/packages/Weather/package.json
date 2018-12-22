@@ -1,0 +1,6 @@
+{
+  "name": "@outernet/skylark-weather-application",
+  "osjs": {
+    "type": "package"
+  }
+}

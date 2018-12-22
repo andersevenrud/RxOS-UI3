@@ -1,0 +1,38 @@
+const path = require('path');
+const mode = process.env.NODE_ENV || 'development';
+const minimize = mode === 'production';
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+module.exports = () => ({
+  mode,
+  devtool: 'source-map',
+  entry: path.resolve(__dirname, 'index.js'),
+  context: path.resolve(__dirname),
+  output: {
+    path: path.resolve(__dirname, 'dist')
+  },
+  externals: {
+    osjs: 'OSjs'
+  },
+  optimization: {
+    minimize,
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      path.resolve(__dirname, 'icon.png'),
+      path.resolve(__dirname, 'data/index.html'),
+      path.resolve(__dirname, 'data/data')
+    ]),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+});

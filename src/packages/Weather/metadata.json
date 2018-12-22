@@ -1,0 +1,16 @@
+{
+  "type": "application",
+  "name": "Weather",
+  "category": "utilities",
+  "singleton": true,
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Weather"
+  },
+  "description": {
+    "en_EN": "Weather"
+  },
+  "files": [
+    "main.js"
+  ]
+}

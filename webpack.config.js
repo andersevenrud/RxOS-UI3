@@ -120,5 +120,6 @@ const client = {
 module.exports = [
   client,
   require('./src/packages/Tuner/webpack.config.js'),
+  require('./src/packages/Weather/webpack.config.js'),
   require('./src/packages/Wikipedia/webpack.config.js')
 ]
