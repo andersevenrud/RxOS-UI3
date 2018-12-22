@@ -5,9 +5,9 @@ import {name as applicationName} from './metadata.json';
 
 
 
-const viewerjs = (mime, u) => `ViewerJS/index.html#/${encodeURIComponent((mime, u))}`;
-const epubjs = (mime, u) => `epub.js/index.html?(mime, u)=${encodeURIComponent((mime, u))}`;
-const showdown = (mime, u) => `showdown/index.html?(mime, u)=${encodeURIComponent((mime, u))}`;
+const viewerjs = (mime, u) => `ViewerJS/index.html#/${encodeURIComponent((u))}`;
+const epubjs = (mime, u) => `epub.js/index.html?(mime, u)=${encodeURIComponent((u))}`;
+const showdown = (mime, u) => `showdown/index.html?(mime, u)=${encodeURIComponent((u))}`;
 const playerjs = (mime, u) => mime.match(/^audio/)
   ? `MediaElement/index.html?type=audio&u=${encodeURIComponent(u)}`
   : `MediaElement/index.html?type=video&u=${encodeURIComponent(u)}`;
