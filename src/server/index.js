@@ -49,6 +49,7 @@ const {
 
 const config = require('./config.js');
 const auth = require('./auth.js');
+const {ProcServiceProvider} = require('@osjs/proc-provider/src/server.js');
 const {SkylarkServiceProvider} = require('./provider.js');
 
 const osjs = new Core(config, {});
@@ -62,6 +63,7 @@ osjs.register(AuthServiceProvider, {
   }
 });
 osjs.register(SettingsServiceProvider);
+osjs.register(ProcServiceProvider);
 osjs.register(SkylarkServiceProvider, {
   depends: ['osjs/express']
 });
