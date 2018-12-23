@@ -65,7 +65,7 @@
     "@osjs/panels": "^3.0.6",
     "@osjs/pdfreader-application": "^1.1.10",
     "@osjs/preview-application": "^1.1.10",
-    "@osjs/proc-provider": "^1.0.2",
+    "@osjs/proc-provider": "^1.0.3",
     "@osjs/server": "^3.0.14",
     "@osjs/standard-theme": "^4.0.3",
     "@osjs/textpad-application": "^1.2.2",

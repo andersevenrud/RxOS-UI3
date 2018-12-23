@@ -73,7 +73,7 @@ The distribution will be output to `dist.packed/`.
 * At the moment the server uses dummy (testing) authentication. See `src/server/config.js`
 * When running in development mode, everything is stored in `vfs/` and `target/`
 
-## Included Applications
+## Included Stuff
 
 * `@osjs/calculator-application`
 * `@osjs/epub-application`
@@ -82,3 +82,4 @@ The distribution will be output to `dist.packed/`.
 * `@osjs/pdfreader-application`
 * `@osjs/preview-application`
 * `@osjs/textpad-application`
+* `@osjs/proc-provider`
