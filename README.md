@@ -72,3 +72,13 @@ The distribution will be output to `dist.packed/`.
 * I discovered that some v2 GUI features has not made it into v3
 * At the moment the server uses dummy (testing) authentication. See `src/server/config.js`
 * When running in development mode, everything is stored in `vfs/` and `target/`
+
+## Included Applications
+
+* `@osjs/calculator-application`
+* `@osjs/epub-application`
+* `@osjs/filemanager-application`
+* `@osjs/musicplayer-application`
+* `@osjs/pdfreader-application`
+* `@osjs/preview-application`
+* `@osjs/textpad-application`
