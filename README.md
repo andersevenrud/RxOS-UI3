@@ -82,4 +82,5 @@ The distribution will be output to `dist.packed/`.
 * `@osjs/pdfreader-application`
 * `@osjs/preview-application`
 * `@osjs/textpad-application`
+* `@osjs/webodf-application`
 * `@osjs/proc-provider`

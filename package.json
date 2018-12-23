@@ -69,6 +69,7 @@
     "@osjs/server": "^3.0.14",
     "@osjs/standard-theme": "^4.0.3",
     "@osjs/textpad-application": "^1.2.2",
+    "@osjs/webodf-application": "^0.5.1",
     "hyperapp": "^1.2.9",
     "network": "^0.4.1",
     "unix-dgram": "^2.0.2",
