@@ -1,5 +1,5 @@
 {
-  "name": "@outernet/skylark",
+  "name": "@outernet/rxos-ui",
   "version": "6.0.0",
   "description": "RxOS-UI3",
   "main": "index.js",
@@ -76,12 +76,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/osjs/OS.js.git"
+    "url": "git+https://github.com/andersevenrud/RxOS-UI3"
   },
   "bugs": {
-    "url": "https://github.com/osjs/OS.js/issues"
+    "url": "https://github.com/andersevenrud/RxOS-UI3/issues"
   },
-  "homepage": "https://www.os-js.org",
+  "homepage": "https://othernet.is/",
   "engines": {
     "node": ">=8.0.0"
   }
