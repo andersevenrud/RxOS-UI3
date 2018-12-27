@@ -57,7 +57,7 @@ The distribution will be output to `dist.packed/`.
 * [x] App: News
 * [x] App: Radio
 * [x] ~~App: Reader~~ *replaced by individual apps*
-* [ ] App: Tuner (**in progress**)
+* [x] App: Tuner
 * [x] App: Weather
 * [x] App: WhatsNew
 * [x] App: Wikipedia
