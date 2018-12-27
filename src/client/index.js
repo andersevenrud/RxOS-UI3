@@ -73,6 +73,11 @@ const init = () => {
   osjs.register(ProcServiceProvider);
   osjs.register(SkylarkServiceProvider);
 
+  const watermark = document.createElement('div');
+  watermark.id = 'watermark';
+  watermark.innerHTML = config.skylark.stamp;
+  document.body.appendChild(watermark);
+
   osjs.boot();
 };
 

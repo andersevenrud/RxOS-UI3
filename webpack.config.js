@@ -44,7 +44,7 @@ const client = {
   },
   plugins: [
     new DefinePlugin({
-      OSJS_VERSION: npm.version
+      OSJS_VERSION: JSON.stringify(npm.version)
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/client/index.ejs'),

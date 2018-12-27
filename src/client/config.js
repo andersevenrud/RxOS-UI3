@@ -38,6 +38,8 @@ const login = development
   ? {username: 'guest', password: 'guest'}
   : {};
 
+const stamp = `Skylark ${OSJS_VERSION} &copy; 2018 Outernet Inc`;
+
 module.exports = {
   auth: {
     login,
@@ -45,7 +47,8 @@ module.exports = {
       title: '',
       logo: {
         position: 'top',
-        src: require('./splash.png')
+        src: require('./splash.png'),
+        stamp
       }
     }
   },
@@ -85,5 +88,8 @@ module.exports = {
       adapter: 'system',
       icon: {name: 'user-home'}
     }]
+  },
+  skylark: {
+    stamp
   }
 };

@@ -49,3 +49,12 @@ html {
 .osjs-root {
   background-image: url('./wallpaper.png');
 }
+
+#watermark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  padding: 1em;
+  font-size: 80%;
+}
