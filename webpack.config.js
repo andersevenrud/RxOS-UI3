@@ -123,6 +123,7 @@ module.exports = [
   require('./src/packages/Tuner/webpack.config.js'),
   require('./src/packages/Radio/webpack.config.js'),
   require('./src/packages/Reader/webpack.config.js'),
+  require('./src/packages/Network/webpack.config.js'),
   require('./src/packages/Weather/webpack.config.js'),
   require('./src/packages/WhatsNew/webpack.config.js'),
   require('./src/packages/Messaging/webpack.config.js'),

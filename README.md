@@ -53,7 +53,7 @@ The distribution will be output to `dist.packed/`.
 * [ ] Service: ONDD (**in progress**)
 * [ ] App: LogViewer
 * [x] App: Messaging
-* [ ] App: Network
+* [ ] App: Network (**in progress**)
 * [x] App: News
 * [x] App: Radio
 * [x] ~~App: Reader~~ *replaced by individual apps*
