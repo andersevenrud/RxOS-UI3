@@ -28,7 +28,11 @@ export class SkylarkServiceProvider {
     this.core.singleton('skylark/config', () => ({
       set: config => {
         return request('POST', '/skylark/config', config)
-          .then(json => (configCache = json));
+          .then(json => {
+            configCache = json;
+
+            core.emit('skylark/config:update');
+          });
       },
 
       get: (key, defaultValue) => {
