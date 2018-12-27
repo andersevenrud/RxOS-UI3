@@ -1,7 +1,7 @@
 {
   "type": "application",
   "name": "Reader",
-  "category": "utilities",
+  "category": "office",
   "icon": "icon.png",
   "title": {
     "en_EN": "Reader"

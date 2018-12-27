@@ -1,7 +1,7 @@
 {
   "type": "application",
   "name": "Tuner",
-  "category": "utilities",
+  "category": "network",
   "singleton": true,
   "icon": "icon.png",
   "title": {

@@ -1,7 +1,7 @@
 {
   "type": "application",
   "name": "Radio",
-  "category": "utilities",
+  "category": "multimedia",
   "singleton": true,
   "icon": "icon.png",
   "title": {
