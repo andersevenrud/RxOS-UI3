@@ -70,9 +70,16 @@ const createRows = values => ([{
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
   const skylarkConfig = core.make('skylark/config');
+  const config = skylarkConfig.get('tunerConf');
 
   const render = $content => {
     const hyperapp = app({
+      config: {
+        antennaName: config.selectedAntenna,
+        antennaTypes: reduceObject(config.antennaTypes),
+        beamName: config.selectedBeam,
+        beamNames: reduceObject(config.beams)
+      },
       beamNames: {},
       beamName: '',
 
@@ -89,15 +96,7 @@ const register = (core, args, options, metadata) => {
       }),
     }, {
       beam: listView.actions({}),
-      status: listView.actions({}),
-      setConfig:  config => (state, actions) => {
-        return {
-          antennaName: config.tunerConf.selectedAntenna,
-          antennaTypes: reduceObject(config.tunerConf.antennaTypes),
-          beamName: config.tunerConf.selectedBeam,
-          beamNames: reduceObject(config.tunerConf.beams)
-        }
-      }
+      status: listView.actions({})
     }, (state, actions) => {
       const BeamParameters = listView.component(state.beam, actions.beam);
       const Status = listView.component(state.status, actions.status);
@@ -147,8 +146,6 @@ const register = (core, args, options, metadata) => {
         }, tabs)
       ]);
     }, $content);
-
-    proc.on('config-loaded', config => hyperapp.setConfig(config));
   };
 
   proc.createWindow({
@@ -158,11 +155,6 @@ const register = (core, args, options, metadata) => {
     dimension: {width: 400, height: 300}
   })
     .on('destroy', () => proc.destroy())
-    .on('render', () => {
-      skylarkConfig.get()
-        .then(config => proc.emit('config-loaded', config))
-        .catch(err => console.warn(err));
-    })
     .render(render);
 
   return proc;

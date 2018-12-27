@@ -41,7 +41,8 @@ const mapRow = iter => {
 
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
-  const command = name => core.make('skylark/command', name);
+  const {exec} = core.make('osjs/proc');
+  const config = core.make('skylark/config');
 
   let updateInterval;
 
@@ -50,9 +51,10 @@ const register = (core, args, options, metadata) => {
       updateInterval = setTimeout(() => poll(), 120000);
     };
 
-    command('getMessages')
-      .then(data => {
-        const lines = String(data).trim().split('\n');
+    const command = config.get('cmds.getMessages');
+    exec(command.cmd, command.args)
+      .then(({stdout}) => {
+        const lines = String(stdout).trim().split('\n');
 
         const rows = lines
           .map(line => line.split(','))

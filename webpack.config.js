@@ -101,7 +101,7 @@ const client = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!simplejsonconf)/,
         use: {
           loader: 'babel-loader'
         }

@@ -1,3 +1,4 @@
+import simplejsonconf from 'simplejsonconf';
 
 export class SkylarkServiceProvider {
 
@@ -16,6 +17,8 @@ export class SkylarkServiceProvider {
   }
 
   init() {
+    let configCache;
+
     const request = (method, endpoint, body = {}) => this.core.request(
       this.core.url(endpoint),
       {method, body},
@@ -23,19 +26,23 @@ export class SkylarkServiceProvider {
     );
 
     this.core.singleton('skylark/config', () => ({
-      set: config => request('POST', '/skylark/config', conig),
-      get: () => request('GET', '/skylark/config')
+      set: config => {
+        return request('POST', '/skylark/config', config)
+          .then(json => (configCache = json));
+      },
+
+      get: (key, defaultValue) => {
+        return simplejsonconf(configCache)
+          .get(key, defaultValue);
+      }
     }));
 
     this.core.singleton('skylark/odnn', () => ({
       status: () => request('GET', '/skylark/ondd')
     }));
 
-    this.core.singleton('skylark/command', (name, ...args) => {
-      return request('POST', '/skylark/command', {name, args});
-    });
-
-    return Promise.resolve();
+    return request('GET', '/skylark/config')
+      .then(json => (configCache = json));
   }
 
   start() {
