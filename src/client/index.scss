@@ -49,6 +49,8 @@ html {
   background-image: url('./wallpaper.png');
 
   &[data-mobile="true"] {
+    #osjs-context-menu,
+    .osjs-panel,
     .osjs-window {
       font-size: 12px;
     }
