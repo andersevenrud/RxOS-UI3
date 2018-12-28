@@ -16,7 +16,8 @@ import {
 const networkView = (state, actions) => ([
   h(BoxContainer, {}, 'Hostname'),
   h(TextField, {
-    value: state.network.hostname
+    value: state.network.hostname,
+    onchange: (ev, value) => actions.setNetwork({hostname: value})
   }),
 
   h(BoxContainer, {}, 'Change "othernet" user password'),
@@ -28,20 +29,61 @@ const networkView = (state, actions) => ([
   h(BoxContainer, {}, 'WiFi Mode'),
   h(SelectField, {
     value: state.network.wifiMode,
-    choices: state.network.wifiModes
-  }),
-
-  h(Toolbar, {align: 'flex-end', justify: 'flex-end'}, [
-    h(Button, {
-      onclick: () => actions.applyNetwork()
-    }, 'Apply & Restart')
-  ])
+    choices: state.network.wifiModes,
+    onchange: (ev, value) => actions.setNetwork({wifiMode: value})
+  })
 ]);
 
 const hotspotView = (state, actions) => ([
+  h(BoxContainer, {}, 'Hotspot Name'),
+  h(TextField, {
+    value: state.hotspot.ssid,
+    onchange: (ev, value) => actions.setHotspot({ssid: value})
+  }),
+
+  h(BoxContainer, {}, 'Do not show in scan lists'),
+  h(ToggleField, {
+    checked: state.hotspot.hidden,
+    onchange: (ev, value) => actions.setHotspot({hidden: value})
+  }),
+
+  h(BoxContainer, {}, 'Country'),
+  h(SelectField, {
+    value: state.hotspot.country,
+    onchange: (ev, value) => actions.setHotspot({country: value})
+  }),
+
+  h(BoxContainer, {}, 'Channel'),
+  h(SelectField, {
+    choices: state.hotspot.channels,
+    value: state.hotspot.channel,
+    onchange: (ev, value) => actions.setHotspot({channel: value})
+  }),
+
+  h(BoxContainer, {}, 'Enable Security (WPA)'),
+  h(ToggleField, {
+    checked: state.hotspot.security,
+    onchange: (ev, value) => actions.setHotspot({security: value})
+  }),
+
+  h(BoxContainer, {}, 'Password (PSK) (minimum 8 chars)'),
+  h(TextField, {
+    disabled: !state.hotspot.security,
+    type: 'password'
+  }),
 ]);
 
 const wifiView = (state, actions) => ([
+  h(BoxContainer, {}, 'Access Point Name'),
+  h(TextField, {
+    value: state.wifi.ssid,
+    onchange: (ev, value) => actions.setWifi({ssid: value})
+  }),
+
+  h(BoxContainer, {}, 'Password'),
+  h(TextField, {
+    type: 'password'
+  }),
 ]);
 
 const render = (core, proc) => $content => {
@@ -68,6 +110,11 @@ const render = (core, proc) => $content => {
       inner(networkView(state, actions)),
       inner(hotspotView(state, actions)),
       inner(wifiView(state, actions))
+    ]),
+    h(Toolbar, {align: 'flex-end', justify: 'flex-end'}, [
+      h(Button, {
+        onclick: () => actions.save()
+      }, 'Apply & Restart')
     ])
   ]);
 
@@ -78,13 +125,21 @@ const render = (core, proc) => $content => {
       hostname: config.hostname
     },
     hotspot: {
-
+      ssid: config.ap.ssid,
+      hidden: config.ap.hidden,
+      country: config.ap.selectedCountry,
+      channel: config.ap.selectedChannel,
+      channels: config.ap.channels,
+      security: config.ap.securityEnabled
     },
     wifi: {
-
+      ssid: ''
     }
   }, {
-    applyNetwork: () => {}
+    setNetwork: obj => state => Object.assign(state.network, obj),
+    setHotspot: obj => state => Object.assign(state.hotspot, obj),
+    setWifi: obj => state => Object.assign(state.wifi, obj),
+    save: () => {}
   }, view, $content);
 };
 
