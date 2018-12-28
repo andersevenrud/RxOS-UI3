@@ -33,11 +33,9 @@ Launches at http://localhost:8080 by default
 
 To watch for changes in the backround run `SKYLARK_DEVELOPMENT=true npm run watch`
 
-## Packaging
+## Documentation
 
-To create a packaged distribution, run: `./bin/pack.sh`
-
-The distribution will be output to `dist.packed/`.
+See `docs/` directory.
 
 ## TODO
 
@@ -45,6 +43,7 @@ The distribution will be output to `dist.packed/`.
 * [x] VFS Mountpoints
 * [x] Distro layout
 * [x] Client style configs
+* [x] Client: Low-res optimizations
 * [x] Distro: Target files
 * [x] Distro: Packaging script
 * [ ] Service: Config (**in progress**)
@@ -64,23 +63,4 @@ The distribution will be output to `dist.packed/`.
 * [ ] Corrections: Package metadata
 * [ ] Refactor: JSX
 * [ ] Refactor: Data over WS
-* [ ] Documentation: Developer Documentation
-
-## Notes
-
-* All packages share the bottom `node_modules/` and `webpack.config.js`
-* I discovered that some v2 GUI features has not made it into v3
-* At the moment the server uses dummy (testing) authentication. See `src/server/config.js`
-* When running in development mode, everything is stored in `vfs/` and `target/`
-
-## Included Stuff
-
-* `@osjs/calculator-application`
-* `@osjs/epub-application`
-* `@osjs/filemanager-application`
-* `@osjs/musicplayer-application`
-* `@osjs/pdfreader-application`
-* `@osjs/preview-application`
-* `@osjs/textpad-application`
-* `@osjs/webodf-application`
-* `@osjs/proc-provider`
+* [x] Documentation: Developer Documentation
