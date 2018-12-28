@@ -33,6 +33,7 @@
 // https://manual.os-js.org/v3/config/#client
 //
 
+const {protocol, hostname} = window.location;
 const development = process.env.SKYLARK_DEVELOPMENT === 'true';
 const login = development
   ? {username: 'guest', password: 'guest'}
@@ -94,7 +95,9 @@ module.exports = {
       icon: {name: 'drive-harddisk'}
     }]
   },
+
   skylark: {
-    stamp
+    stamp,
+    radio: `${protocol}//${hostname}:8090/othernet.mp3`
   }
 };

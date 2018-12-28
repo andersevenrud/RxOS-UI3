@@ -16,6 +16,8 @@ All of the used endpoints and core events are set up in `src/client/provider.js`
 
 This makes it easy to swap out the actual server.
 
+All configurations are defined in `src/client/config.js` and `src/server/config.js` under the `skylark` namespace.
+
 ## Adding Applications
 
 > NOTE: Applications share the root-level dependencies from `pacakge.json`, as well as the `webpack.config.js` file.

@@ -5,9 +5,7 @@ import {name as applicationName} from './metadata.json';
 
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
-
-  const {protocol, host} = window.location;
-  const url = `${protocol}//${host}:8090/othernet.mp3`;
+  const url = core.config('skylark.radio');
 
   proc.createWindow({
     id: 'RadioWindow',
