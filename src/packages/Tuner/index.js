@@ -70,11 +70,13 @@ const createBeamRows = (type, beams) => ([{
 }]);
 
 const register = (core, args, options, metadata) => {
+  let pollInterval;
+
   const proc = core.make('osjs/application', {args, options, metadata});
   const skylarkConfig = core.make('skylark/config');
   const odnn = core.make('skylark/odnn');
   const onconfigupdate = () => proc.emit('config-updated');
-  let pollInterval;
+  const clearPollInterval = () => clearTimeout(pollInterval);
 
   const poll = () => {
     odnn.status()
@@ -224,7 +226,15 @@ const register = (core, args, options, metadata) => {
       return h(Box, {grow: 1, shrink: 1}, [
         h(Tabs, {
           box: {grow: 1, shrink: 1},
-          labels: ['Sattelite', 'Custom', 'LNB', 'Status']
+          labels: ['Sattelite', 'Custom', 'LNB', 'Status'],
+          onchange: (ev, index, label) => {
+
+            if (label === 'Status') {
+              poll();
+            } else {
+              clearPollInterval();
+            }
+          }
         }, tabs)
       ]);
     }, $content);
@@ -241,7 +251,7 @@ const register = (core, args, options, metadata) => {
     proc.emit('config-updated');
   };
 
-  proc.on('destroy', () => clearTimeout(pollInterval));
+  proc.on('destroy', clearPollInterval);
 
   proc.createWindow({
     id: 'TunerWindow',
@@ -250,7 +260,6 @@ const register = (core, args, options, metadata) => {
     dimension: {width: 400, height: 300}
   })
     .on('destroy', () => proc.destroy())
-    .on('render', () => poll())
     .render(render);
 
   core.on('skylark/config:update', onconfigupdate);
