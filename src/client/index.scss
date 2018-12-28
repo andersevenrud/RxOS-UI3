@@ -56,6 +56,10 @@ html {
   }
 }
 
+.osjs-panel {
+  background-color: #101010 !important;
+}
+
 #watermark {
   position: absolute;
   bottom: 0;
@@ -63,4 +67,25 @@ html {
   color: #fff;
   padding: 1em;
   font-size: 80%;
+}
+
+@media (max-width: 460px) {
+  .osjs-panel-item[data-name="clock"] {
+    display: none;
+  }
+
+  /* FIXME: This will probably be added to the main library */
+  .osjs-panel-item[data-name="windows"],
+  .osjs-panel-item[data-name="menu"] {
+    span {
+      width: 0;
+      overflow: hidden;
+    }
+  }
+
+  .osjs-panel-item[data-name="windows"] {
+    & > div {
+      min-width: auto;
+    }
+  }
 }
