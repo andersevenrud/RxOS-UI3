@@ -70,12 +70,16 @@ module.exports = {
       }
     }
   },
+  windows: {
+    mobile: 460
+  },
   vfs: {
     defaultPath: 'home:/',
     mountpoints: [{
       name: 'osjs',
       label: 'Skylark',
       adapter: 'system',
+      enabled: false,
       icon: {name: 'folder-publicshare'}
     }, {
       name: 'home',
@@ -86,7 +90,7 @@ module.exports = {
       name: 'downloads',
       label: 'Downloads',
       adapter: 'system',
-      icon: {name: 'user-home'}
+      icon: {name: 'drive-harddisk'}
     }]
   },
   skylark: {

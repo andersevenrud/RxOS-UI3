@@ -48,6 +48,12 @@ html {
 
 .osjs-root {
   background-image: url('./wallpaper.png');
+
+  &[data-mobile="true"] {
+    .osjs-window {
+      font-size: 12px;
+    }
+  }
 }
 
 #watermark {
