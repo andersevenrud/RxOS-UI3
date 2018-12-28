@@ -60,6 +60,7 @@ module.exports = {
     },
 
     settings: {
+      font: 'sans-serif',
       background: {
         src: require('./wallpaper.png'),
         color: '#089bd2',
