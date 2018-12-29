@@ -23,9 +23,8 @@ mkdir -p $dest/mnt/downloads
 # Copy OS.js server
 cp -r src/server $dest_osjs/src/
 
-# Copy OS.js deps
-# FIXME
-cp -r node_modules $dest_osjs/
+# Install dependencies
+(cd $dest_osjs && npm install)
 
 # Copy package server files
 list=$(cat $dest_osjs/packages.json | jq -r '.[]')

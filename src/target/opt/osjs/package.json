@@ -1,0 +1,24 @@
+{
+  "name": "@outernet/rxos-ui",
+  "version": "6.0.0",
+  "description": "RxOS-UI3",
+  "dependencies": {
+    "@osjs/server": "^3.0.14",
+    "network": "^0.4.1",
+    "simplejsonconf": "^2.0.5",
+    "unix-dgram": "^2.0.2",
+    "userid": "^0.3.1",
+    "x2js": "^3.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersevenrud/RxOS-UI3"
+  },
+  "bugs": {
+    "url": "https://github.com/andersevenrud/RxOS-UI3/issues"
+  },
+  "homepage": "https://othernet.is/",
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

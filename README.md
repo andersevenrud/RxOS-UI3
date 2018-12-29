@@ -39,10 +39,12 @@ See `docs/` directory.
 
 ## TODO
 
+### Conversion
+
 * [x] Authentication Adapter
 * [x] VFS Mountpoints
 * [x] Distro layout
-* [x] Client style configs
+* [x] Client Custimizations
 * [x] Client: Low-res optimizations
 * [x] Distro: Target files
 * [x] Distro: Packaging script
@@ -60,7 +62,9 @@ See `docs/` directory.
 * [x] App: Weather
 * [x] App: WhatsNew
 * [x] App: Wikipedia
-* [ ] Corrections: Package metadata
-* [ ] Refactor: JSX
-* [ ] Refactor: Data over WS
 * [x] Documentation: Developer Documentation
+
+### General Improvements
+
+* [ ] Refactor: JSX in apps
+* [ ] Refactor: Data over WS ?

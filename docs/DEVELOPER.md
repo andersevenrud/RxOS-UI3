@@ -30,8 +30,6 @@ All configurations are defined in `src/client/config.js` and `src/server/config.
 
 ## Creating build for deployment
 
-> NOTE: This currently does not shake the dependency tree. Ideally a new `package.json` file should be created with the `@osjs/server` dependency and all other used within added providers.
-
 To create a packaged distribution, run: `./bin/pack.sh`
 
 The distribution will be output to `dist.packed/`.
