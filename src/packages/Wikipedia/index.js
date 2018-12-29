@@ -9,6 +9,19 @@ import {
   listView
 } from '@osjs/gui';
 
+const createRows = list => list
+  .filter(file => file.filename.substr(0, 1) !== '.')
+  .map(data => ({
+      columns: [
+        data.filename
+          .split('.')
+          .slice(0, -1)
+          .join('.')
+          .replace(/_/g, ' ')
+      ],
+      data
+  }));
+
 const register = (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
   const {url, readdir} = core.make('osjs/vfs');
@@ -51,16 +64,7 @@ const register = (core, args, options, metadata) => {
         .catch(error => console.warn(error));
     });
 
-    proc.on('render-list', list => hyperapp.listView.setRows(list.map(data => ({
-      columns: [
-        data.filename
-          .split('.')
-          .slice(0, -1)
-          .join('.')
-          .replace(/_/g, ' ')
-      ],
-      data
-    }))));
+    proc.on('render-list', list => hyperapp.listView.setRows(createRows(list)));
   };
 
   const init = () => {
