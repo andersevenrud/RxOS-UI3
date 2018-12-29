@@ -12,7 +12,7 @@ const register = (core, args, options, metadata) => {
   })
     .on('destroy', () => proc.destroy())
     .render($content => {
-      const src = proc.resource('index.html');
+      const src = proc.resource('data/index.html');
       const iframe = document.createElement('iframe');
       iframe.style.position = 'absolute';
       iframe.style.top = '0';

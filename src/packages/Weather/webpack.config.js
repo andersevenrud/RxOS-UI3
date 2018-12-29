@@ -20,8 +20,10 @@ module.exports = () => ({
   plugins: [
     new CopyWebpackPlugin([
       path.resolve(__dirname, 'icon.png'),
-      path.resolve(__dirname, 'data/index.html'),
-      path.resolve(__dirname, 'data/data')
+      {
+        from: path.resolve(__dirname, 'data'),
+        to: path.resolve(__dirname, 'dist', 'data')
+      }
     ]),
   ],
   module: {
