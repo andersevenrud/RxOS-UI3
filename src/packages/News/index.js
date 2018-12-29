@@ -24,7 +24,14 @@ const register = (core, args, options, metadata) => {
       channels: [],
       articlesView: listView.state({
         zebra: false,
-        columns: ['Date', 'Article']
+        columns: [{
+          label: 'Date',
+          style: {
+            flex: '0 1 7em'
+          }
+        }, {
+          label: 'Article'
+        }]
       }),
     }, {
       setUrl: currentUrl => ({currentUrl}),
@@ -35,10 +42,12 @@ const register = (core, args, options, metadata) => {
       }),
 
       setChannel: channel => (state, actions) => {
-        const rows = state.news.map(data => ({
-          columns: [data.date, data.title],
-          data: data.file
-        }));
+        const rows = state.news
+          .filter(data => data.channel === channel)
+          .map(data => ({
+            columns: [data.date, data.title],
+            data: data.file
+          }));
 
         actions.articlesView.setRows(rows);
 
@@ -46,7 +55,11 @@ const register = (core, args, options, metadata) => {
       },
 
       articlesView: listView.actions({
-        select: ({data}) => proc.emit('render-file', data)
+        select: ({data}) => {
+          url(data)
+            .then(uri => hyperapp.setUrl(uri))
+            .catch(error => console.warn(error));
+        }
       }),
     }, (state, actions) => {
       const ArticlesView = listView.component(state.articlesView, actions.articlesView);
@@ -54,7 +67,7 @@ const register = (core, args, options, metadata) => {
       return h(Box, {margin: false}, [
         h(Panes, {
           box: {grow: 1, shrink: 1},
-          sizes: [200]
+          sizes: [280]
         }, [
           h(Box, {grow: 1, shrink: 1}, [
             h(SelectField, {
@@ -75,18 +88,7 @@ const register = (core, args, options, metadata) => {
       ]);
     }, $content);
 
-    proc.on('render-file', file => {
-      url(file)
-        .then(uri => hyperapp.setUrl(uri))
-        .catch(error => console.warn(error));
-    });
-
     proc.on('set-news', news => hyperapp.setNews(news));
-
-    proc.on('render-list', list => hyperapp.listView.setRows(list.map(data => ({
-      columns: [data.filename],
-      data
-    }))));
   };
 
   const init = () => {
