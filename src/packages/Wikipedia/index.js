@@ -52,14 +52,20 @@ const register = (core, args, options, metadata) => {
     });
 
     proc.on('render-list', list => hyperapp.listView.setRows(list.map(data => ({
-      columns: [data.filename],
+      columns: [
+        data.filename
+          .split('.')
+          .slice(0, -1)
+          .join('.')
+          .replace(/_/g, ' ')
+      ],
       data
     }))));
   };
 
   const init = () => {
     proc.on('load-files', () => {
-      readdir({path: 'downloads:/'}, {filter: iter => iter.mime === 'text/html'})
+      readdir({path: 'downloads:/Wikipedia'}, {filter: iter => iter.mime === 'text/html'})
         .then(list => proc.emit('render-list', list))
         .catch(error => console.warn(error));
     });
