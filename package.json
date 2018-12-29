@@ -45,7 +45,7 @@
     "stylelint": "^9.9.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.4.4",
-    "webpack": "^4.28.2",
+    "webpack": "^4.28.3",
     "webpack-cli": "^3.1.2",
     "whatwg-fetch": "^3.0.0"
   },
@@ -61,7 +61,7 @@
     "@osjs/gui": "^4.0.15",
     "@osjs/htmlviewer-application": "^1.2.2",
     "@osjs/musicplayer-application": "^1.2.3",
-    "@osjs/panels": "^3.0.7",
+    "@osjs/panels": "^3.0.8",
     "@osjs/pdfreader-application": "^1.1.10",
     "@osjs/preview-application": "^1.1.10",
     "@osjs/proc-provider": "^1.0.4",
