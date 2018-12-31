@@ -2,6 +2,8 @@
 
 Conversion of https://github.com/Othernet-Project/RxOS-UI2 into OS.js v3
 
+![Screenshot](https://raw.githubusercontent.com/andersevenrud/RxOS-UI3/master/docs/screenshot.png)
+
 ## Requirements
 
 Node 8 or above
